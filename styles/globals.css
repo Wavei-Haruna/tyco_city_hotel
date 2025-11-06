@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-tyco-white text-tyco-navy font-sans antialiased;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm
+           bg-tyco-navy text-tyco-white shadow-md transition-all duration-300
+           hover:-translate-y-0.5 hover:shadow-lg hover:bg-tyco-navy-dark;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm
+           bg-tyco-yellow text-tyco-navy shadow-md transition-all duration-300
+           hover:-translate-y-0.5 hover:shadow-lg hover:bg-[#ffdb33];
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm
+           bg-tyco-red text-white shadow-md transition-all duration-300
+           hover:-translate-y-0.5 hover:shadow-lg hover:bg-[#b71c1c];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-sm
+           border border-tyco-border text-tyco-navy
+           transition-all duration-300 hover:bg-gray-50 hover:shadow-sm;
+  }
+
+  /* Navbar Links */
+  .nav-link {
+    @apply px-4 py-2 rounded-lg font-medium text-tyco-navy
+           transition-all duration-300 hover:text-tyco-red hover:bg-gray-100;
+  }
+
+  .nav-link-dark {
+    @apply px-4 py-2 rounded-lg font-medium text-white
+           transition-all duration-300 hover:text-tyco-yellow hover:bg-white/10;
+  }
+
+  .nav-link.active {
+    @apply text-tyco-red font-bold;
+  }
+
+  /* Dropdown */
+  .dropdown-item {
+    @apply block px-6 py-4 text-tyco-navy hover:bg-gradient-to-r
+           hover:from-tyco-secondary/10 hover:to-tyco-accent/10
+           border-b border-gray-100 last:border-0 transition-all duration-300;
+  }
+
+  .dropdown-item:hover .label {
+    @apply text-tyco-accent;
+  }
+
+  .dropdown-description {
+    @apply text-xs text-gray-500 mt-1;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white border border-tyco-border rounded-2xl p-6 shadow-card
+           transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-tyco-border
+           focus:ring-2 focus:ring-tyco-yellow focus:outline-none;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full
+           bg-tyco-yellow text-tyco-navy;
+  }
+
+  /* Hero Section */
+  .hero {
+    @apply relative w-full h-[80vh] flex items-center justify-center
+           bg-cover bg-center text-center;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/50;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-white space-y-6;
+  }
+
+  /* Headings */
+  .h1 {
+    @apply text-4xl md:text-6xl font-extrabold leading-tight text-tyco-navy;
+  }
+
+  .h2 {
+    @apply text-3xl md:text-4xl font-bold text-tyco-navy;
+  }
+
+  .h3 {
+    @apply text-2xl font-semibold text-tyco-navy;
+  }
+
+  /* Glass */
+  .glass {
+    @apply backdrop-blur-xl bg-white/70 border border-white/20 rounded-2xl shadow-lg
+           dark:bg-slate-900/40 dark:border-white/10;
+  }
+
+  /* Footer */
+  .footer-link {
+    @apply text-sm text-gray-600 hover:text-tyco-red transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-tyco-secondary to-tyco-accent bg-clip-text text-transparent;
+  }
+
+  .center {
+    @apply flex items-center justify-center;
+  }
+
+  .section {
+    @apply py-20 px-4 sm:px-8 lg:px-16;
+  }
+
+  .shadow-hover {
+    @apply transition-shadow duration-300 hover:shadow-xl;
+  }
+}
