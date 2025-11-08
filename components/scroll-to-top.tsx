@@ -34,7 +34,7 @@ export function ScrollToTop() {
           className="fixed bottom-8 right-8 z-40 glass-card w-12 h-12 flex items-center justify-center hover:shadow-lg transition-all duration-300"
           aria-label="Scroll to top"
         >
-          <ChevronUp className="w-6 h-6 text-tyco-navy" />
+          <ChevronUp className="z-50 text-tyco-red" />
         </button>
       )}
     </>

@@ -35,9 +35,9 @@ const quickLinks = [
 
 const services = [
   { href: '/experiences#dining', label: 'Fine Dining', icon: <Utensils className="h-3 w-3" /> },
-  { href: '/experiences#spa', label: 'Spa & Wellness', icon: <Dumbbell className="h-3 w-3" /> },
+
   { href: '/experiences#recreation', label: 'Recreation', icon: <Camera className="h-3 w-3" /> },
-  { href: '/book', label: 'Book Now', icon: <CalendarCheck className="h-3 w-3" /> },
+  { href: '/booking', label: 'Book Now', icon: <CalendarCheck className="h-3 w-3" /> },
   { href: '/rooms?type=deluxe', label: 'Deluxe Rooms', disabled: false },
   { href: '/rooms?type=suite', label: 'Suite Rooms', disabled: false },
 ];
@@ -130,7 +130,7 @@ export function Footer() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold bg-gradient-to-r from-[#dc2626] via-[#facc15] to-[#dc2626] bg-clip-text text-transparent">
-                    Tyco Hotel
+                    Tyco City Hotel
                   </h2>
                   <p className="text-xs text-slate-600">Luxury Redefined</p>
                 </div>
@@ -256,7 +256,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-slate-600">
             <p>
-              &copy; {currentYear} Tyco Hotel. All Rights Reserved.
+              &copy; {currentYear} Tyco City Hotel. All Rights Reserved.
             </p>
             <div className="flex items-center gap-4">
               <Link href="/privacy" className="hover:text-[#dc2626] transition-colors">
