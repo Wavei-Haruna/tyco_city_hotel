@@ -85,13 +85,6 @@ export default function BookingForm({
     }
   }, [roomId]);
 
-  useEffect(() => {
-  if (roomId) {
-    setSelectedRoomId(roomId);
-    fetchRoomDetails(roomId);
-  }
-}, [roomId]);
-
   // Fetch single room
   const fetchRoomDetails = async (id: string) => {
     setLoadingRoom(true);

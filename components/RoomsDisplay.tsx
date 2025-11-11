@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Filter, ArrowRight, Loader2, AlertCircle, Sparkles, MapPin } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { RoomsSkeletonGrid } from "./RoomsSkeletonGrid"
+import RoomsList from "./admin/RoomList"
 
 // Room type definition based on your Firebase structure
 interface Room {
@@ -104,20 +106,9 @@ export function RoomsDisplay({
     return filtered
   }, [rooms, selectedStatus, priceRange, sortBy, limit])
 
-  // Loading state
+  // Loading state: return early to avoid rendering JSX expression outside of render
   if (loading) {
-    return (
-      <div className="min-h-[400px] flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-center"
-        >
-          <Loader2 className="w-12 h-12 animate-spin text-tyco-red mx-auto mb-4" />
-          <p className="text-gray-600 text-lg font-medium">Loading rooms...</p>
-        </motion.div>
-      </div>
-    )
+    return <RoomsSkeletonGrid />
   }
 
   // Error state

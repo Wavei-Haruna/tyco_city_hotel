@@ -107,6 +107,15 @@
 /* ===== Custom Component Classes (Not Tailwind Utilities) ===== */
 
 /* Typography */
+.hide-scrollbar {
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
+
 .h1 {
   font-size: 2.25rem;
   line-height: 1.05;
