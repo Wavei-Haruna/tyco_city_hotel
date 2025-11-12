@@ -78,10 +78,10 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 glass-card w-64">
+              {/* <div className="absolute -bottom-6 -right-6 glass-card w-64">
                 <p className="text-sm font-semibold text-tyco-navy mb-2">Award Winning</p>
                 <p className="text-xs text-gray-600">Best Luxury Hotel 2024</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
