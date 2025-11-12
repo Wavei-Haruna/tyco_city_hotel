@@ -111,7 +111,7 @@ export function RoomCard({ room, index = 0 }: RoomCardProps) {
 
         {/* Main Card Container */}
         <motion.div
-          whileHover={{ y: -8 }}
+
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           className="relative backdrop-blur-2xl bg-white/70 border border-white/20 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 m-[2px]"
         >
