@@ -1,3 +1,6 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -13,8 +16,9 @@
   --color-tyco-navy-dark: #050d1f;
 
   /* Font families */
-  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
+   --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-header: 'Playfair Display', ui-serif, Georgia, serif;
 
   /* Semantic color tokens */
   --color-background: #ffffff;
@@ -344,6 +348,7 @@
   align-items: center;
   padding: 0.25rem 0.625rem;
   border-radius: 9999px;
+
   font-size: 0.75rem;
   font-weight: 600;
   background: rgba(10, 26, 62, 0.08);
@@ -447,7 +452,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-tyco-red);
 }
-
+p, li, span, a{
+  @apply font-sans;
+}
 /* Accessibility */
 :focus {
   outline: none;

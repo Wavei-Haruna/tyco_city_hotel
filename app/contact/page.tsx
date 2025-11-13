@@ -260,7 +260,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-ss
       <Footer />
     </main>
   )

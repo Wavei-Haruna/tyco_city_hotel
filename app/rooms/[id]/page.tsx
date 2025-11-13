@@ -1,4 +1,5 @@
 // app/rooms/[id]/page.tsx
+import Navbar from "@/components/navbar";
 import RoomDetailPage from "@/components/RoomDetailPage";
 import { Metadata } from "next";
 
@@ -17,5 +18,8 @@ export default async function RoomPage({ params }: PageProps) {
   // Await the params in Next.js 15
   const { id } = await params;
 
-  return <RoomDetailPage params={{ id }} />;
+  return <main>
+              <Navbar />
+          <RoomDetailPage params={{ id }} />
+  </main> ;
 }

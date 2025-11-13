@@ -76,8 +76,8 @@ export default function Navbar() {
               </motion.div>
               <div className="hidden sm:block">
                 <div
-                  className={`text-xl font-bold tracking-tight ${
-                    isScrolled ? "text-[var(--color-tyco-navy)]" : "text-white"
+                  className={`text-xl font-header font-bold tracking-tight ${
+                    isScrolled ? "text-[var(--color-tyco-navy)]" : "text-tyco-red"
                   }`}
                 >
                   Tyco City Hotel

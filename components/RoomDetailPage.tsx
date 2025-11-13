@@ -84,13 +84,13 @@ export default function RoomDetailPage({ params }: RoomDetailPageProps) {
     }
   };
 
-  // Share functionality
+  // Share functionality with proper meta tags for social sharing
   const handleShare = async () => {
     if (!room) return;
 
     const shareData = {
       title: `${room.name} - Tyco City Hotel`,
-      text: `Check out ${room.name} at Tyco City Hotel - GH₵${room.price}/night`,
+      text: `Discover luxury at ${room.name} | GH₵${room.price.toLocaleString()}/night | ${room.amenities.length}+ amenities | ${room.rating}★ rating`,
       url: window.location.href,
     };
 
@@ -102,7 +102,7 @@ export default function RoomDetailPage({ params }: RoomDetailPageProps) {
       } else {
         // Fallback: Copy link to clipboard (desktop)
         await navigator.clipboard.writeText(window.location.href);
-        toast.success("Link copied to clipboard!");
+        toast.success("Link copied to clipboard! The preview will show the room image when pasted.");
       }
     } catch (error) {
       if ((error as Error).name !== "AbortError") {
