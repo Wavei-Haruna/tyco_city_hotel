@@ -28,7 +28,7 @@ export default function Home() {
             <div className="space-y-8">
               <div className="space-y-4">
 
-                <h1 className="text-5xl tracking-tighter lg:text-5xl font-bold text-tyco-navy leading-tight">
+                <h1 className="text-3xl tracking-tighter font-header lg:text-5xl font-bold text-tyco-navy leading-tight">
                   Akwaaba to{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-tyco-red to-tyco-yellow">
                     Tyco City Hotel

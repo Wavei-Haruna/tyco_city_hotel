@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={titillium.variable}>
-      <body className="font-sans antialiased">
+      <body className="font-header antialiased ">
         {children}
         <Analytics />
         <Toaster richColors position="top-right" />

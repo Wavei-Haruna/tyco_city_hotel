@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import BookingForm from "@/components/BookingForm";
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
+import Navbar from "@/components/navbar";
 
 // Separate component for the search params logic
 function BookingContent() {
@@ -17,7 +18,7 @@ function BookingContent() {
   const guests = searchParams.get("guests");
 
   const handleSuccess = (bookingId: string) => {
-    router.push(`/booking/confirmation/${bookingId}`);
+    router.push(`/`);
   };
 
   const handleCancel = () => {
@@ -26,13 +27,14 @@ function BookingContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+      <Navbar/>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-tyco-navy mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-tyco-navy mb-4 mt-20">
             Complete Your Reservation
           </h1>
           <p className="text-gray-600 text-lg">
